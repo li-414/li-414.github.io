@@ -41,6 +41,25 @@
       color: #666;
       font-size: 1rem;
     }
+    .intro-section {
+      background: white;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .intro-section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #4a90d9;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+    .intro-section .intro-text {
+      line-height: 1.8;
+      color: #555;
+    }
     section {
       background: white;
       border-radius: 8px;
@@ -102,23 +121,25 @@
   </style>
 </head>
 <body>
+  <!-- 顶部个人介绍独立一行 -->
+  <div style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+    <div class="intro-section">
+      <h2>👤 个人介绍</h2>
+      <div class="intro-text">
+        <p>我是一名热爱编程和分享的开发者，致力于创建有趣且有用的项目。喜欢探索新技术，热衷于开源贡献和知识分享。期待与志同道合的朋友交流和协作！</p>
+      </div>
+    </div>
+  </div>
+
   <div class="wrapper">
-    <!-- 左侧边栏：个人介绍 -->
+    <!-- 左侧边栏留空 -->
     <aside class="sidebar-left">
-      <section>
-        <h2>👤 个人介绍</h2>
-        <div class="intro-text">
-          <p>我是一名热爱编程和分享的开发者，致力于创建有趣且有用的项目。</p>
-          <p>喜欢探索新技术，热衷于开源贡献和知识分享。</p>
-          <p>期待与志同道合的朋友交流和协作！</p>
-        </div>
-      </section>
     </aside>
 
     <!-- 主要内容区域 -->
     <main class="main-content">
       <header>
-        <h1>👋 你好，可以称我为 子非鱼</h1>
+        <h1>�� 你好，可以称我为 子非鱼</h1>
         <p>这里汇总了我的项目、文章和联系方式</p>
       </header>
 
