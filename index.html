@@ -12,10 +12,22 @@
       color: #333;
       line-height: 1.6;
     }
-    .container {
-      max-width: 800px;
+    .wrapper {
+      display: flex;
+      gap: 20px;
+      max-width: 1200px;
       margin: 60px auto;
       padding: 0 20px;
+    }
+    .sidebar-left {
+      flex: 0 0 250px;
+    }
+    .main-content {
+      flex: 1;
+      min-width: 0;
+    }
+    .sidebar-right {
+      flex: 0 0 250px;
     }
     header {
       text-align: center;
@@ -48,6 +60,7 @@
     }
     li {
       margin-bottom: 10px;
+      padding-left: 0;
     }
     a {
       color: #4a90d9;
@@ -62,43 +75,103 @@
       font-size: 0.9rem;
       margin-top: 40px;
     }
+    .intro-text {
+      line-height: 1.8;
+      color: #555;
+    }
+    .intro-text p {
+      margin-bottom: 12px;
+    }
+    .blog-link-item {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .blog-link-item:last-child {
+      border-bottom: none;
+    }
+    @media (max-width: 768px) {
+      .wrapper {
+        flex-direction: column;
+      }
+      .sidebar-left,
+      .sidebar-right,
+      .main-content {
+        flex: 1;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>👋 你好，可以称我为 子非鱼</h1>
-      <p>这里汇总了我的项目、文章和联系方式</p>
-    </header>
+  <div class="wrapper">
+    <!-- 左侧边栏：个人介绍 -->
+    <aside class="sidebar-left">
+      <section>
+        <h2>👤 个人介绍</h2>
+        <div class="intro-text">
+          <p>我是一名热爱编程和分享的开发者，致力于创建有趣且有用的项目。</p>
+          <p>喜欢探索新技术，热衷于开源贡献和知识分享。</p>
+          <p>期待与志同道合的朋友交流和协作！</p>
+        </div>
+      </section>
+    </aside>
 
-    <section>
-      <h2>🚀 项目作品</h2>
-      <ul>
-        <li><a href="#">项目一名称</a> — 简短描述</li>
-        <li><a href="#">项目二名称</a> — 简短描述</li>
-        <li><a href="#">项目三名称</a> — 简短描述</li>
-      </ul>
-    </section>
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+      <header>
+        <h1>👋 你好，可以称我为 子非鱼</h1>
+        <p>这里汇总了我的项目、文章和联系方式</p>
+      </header>
 
-    <section>
-      <h2>📝 文章/笔记</h2>
-      <ul>
-        <li><a href="https://www.cnblogs.com/Zero-FeiYu">我的博客</a></li>
-        <li><a href="#">文章标题二</a></li>
-      </ul>
-    </section>
+      <section>
+        <h2>🚀 项目作品</h2>
+        <ul>
+          <li><a href="#">项目一名称</a> — 简短描述</li>
+          <li><a href="#">项目二名称</a> — 简短描述</li>
+          <li><a href="#">项目三名称</a> — 简短描述</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>🔗 联系方式</h2>
-      <ul>
-        <li>GitHub：<a href="#">你的 GitHub</a></li>
-        <li>邮箱：<a href="mailto:you@example.com">you@example.com</a></li>
-      </ul>
-    </section>
+      <section>
+        <h2>📝 文章/笔记</h2>
+        <ul>
+          <li><a href="https://www.cnblogs.com/Zero-FeiYu">我的博客</a></li>
+          <li><a href="#">文章标题二</a></li>
+        </ul>
+      </section>
 
-    <footer>
-      © 2026 我的个人主页
-    </footer>
+      <section>
+        <h2>🔗 联系方式</h2>
+        <ul>
+          <li>GitHub：<a href="#">你的 GitHub</a></li>
+          <li>邮箱：<a href="mailto:you@example.com">you@example.com</a></li>
+        </ul>
+      </section>
+
+      <footer>
+        © 2026 我的个人主页
+      </footer>
+    </main>
+
+    <!-- 右侧边栏：博客链接 -->
+    <aside class="sidebar-right">
+      <section>
+        <h2>📚 博客链接</h2>
+        <ul>
+          <li class="blog-link-item">
+            <a href="https://www.cnblogs.com/Zero-FeiYu">博客园</a>
+          </li>
+          <li class="blog-link-item">
+            <a href="#">Medium</a>
+          </li>
+          <li class="blog-link-item">
+            <a href="#">掘金</a>
+          </li>
+          <li class="blog-link-item">
+            <a href="#">开发者头条</a>
+          </li>
+        </ul>
+      </section>
+    </aside>
   </div>
 </body>
 </html>
